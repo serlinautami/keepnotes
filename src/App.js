@@ -4,6 +4,9 @@ import {
   Home,
   Login,
   Register,
+  Dashboard,
+  ManageUser,
+  ManageTodo,
   NotFound404
 } from './pages';
 
@@ -12,6 +15,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
+        <Route path="/todo" exact component={ManageTodo}/>
+        <Route path="/user" exact component={ManageUser}/>
+        <Route path="/dashboard" exact component={Dashboard}/>
         <Route path="/register" exact component={Register}/>
         <Route path="/login" exact component={Login}/>
         <Route path="/" exact component={Home}/>
